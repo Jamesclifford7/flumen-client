@@ -1,0 +1,18 @@
+nav {
+    border-bottom: solid; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+
+nav span {
+    display: inline-block;
+    width: 30%; 
+    margin-left: 30px; 
+}
+
+nav ul {
+    display: inline-block; 
+    list-style-type: none;
+    text-align: right; 
+    width: 60%; 
+}

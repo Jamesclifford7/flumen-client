@@ -1,0 +1,62 @@
+.challenge-container div {
+    margin-top: 30px; 
+    margin-left: 40px; 
+}
+
+.company-info {
+    margin-top: 50px; 
+    margin-left: 40px; 
+}
+
+.challenge-info form {
+    margin-top: 100px; 
+}
+
+.challenge-info form button {
+    margin-bottom: 20px; 
+}
+
+.challenge-info form .challenge-description p {
+    width: 75%; 
+    margin: 0 auto; 
+    margin-bottom: 25px; 
+}
+
+.challenge-info form .challenge-description label {
+    margin-right: 5px; 
+}
+
+.challenge-info form .challenge-description input {
+    width: 30%; 
+}
+
+.challenge-info form .additional-questions label {
+    display: block;
+    margin-bottom: 12px; 
+}
+
+.challenge-info form .additional-questions .question {
+    text-align: left; 
+    width: 40%; 
+    margin: 0 auto; 
+    margin-bottom: 25px; 
+}
+
+.challenge-info form .additional-questions .question label {
+    margin-right: 5px; 
+}
+
+.challenge-info form .additional-questions .question label, .challenge-info form .additional-questions .question select, .challenge-info form .additional-questions .question input {
+    display: inline-block; 
+}
+
+.challenge-info form .additional-questions .question input {
+    width: 50%; 
+}
+
+.challenge-info form .additional-questions textarea {
+    display: block; 
+    margin: 0 auto; 
+    width: 700px; 
+    height: 200px; 
+}

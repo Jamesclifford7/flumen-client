@@ -1,0 +1,24 @@
+.dashboard h2, .dashboard h4 {
+    text-align: center; 
+}
+
+.challenge {
+    border: solid; 
+    width: 75%; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.challenge h2, .challenge h4 {
+    text-align: left; 
+}
+
+.challenge .challenge-info {
+    margin-left: 15px; 
+}
+
+.challenge .challenge-match {
+    margin-right: 20px; 
+}

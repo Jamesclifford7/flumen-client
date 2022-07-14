@@ -1,25 +1,98 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
+import { Route, withRouter, useHistory } from 'react-router-dom'
+import Home from './components/LandingPage/index'
+import Dashboard from './components/Dashboard/index'
+import Challenge from './components/Challenge/index'
+import Confirmation from './components/ConfirmationPage/index'
 
 function App() {
+  const [user, setUser] = useState({id: null, email: '', password: ''})
+  const history = useHistory()
+
+  const handleLogin = (event) => {
+    event.preventDefault(); 
+    const email = event.target.email.value
+    const password = event.target.password.value
+    
+
+    if (email === "alanturing@gmail.com" && password === "password") {
+      setUser({
+        id: 1, 
+        email: email, 
+        password: password
+      }); 
+      history.push('/dashboard'); 
+    } else {
+      console.log('user not found')
+    }
+    
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route 
+        path="/home"
+        render={(props) => (
+          <Home 
+            handleLogin={handleLogin}
+            {...props}
+          />
+        )}
+      />
+      <Route 
+        path="/dashboard"
+        render={(props) => (
+          <Dashboard 
+            user={user}
+            {...props}
+          />
+        )}
+      />
+      <Route 
+        path="/challenge"
+        render={(props) => (
+          <Challenge 
+            user={user}
+            {...props}
+          />
+        )}
+      />
+      <Route 
+        path="/confirmation"
+        render={(props) => (
+          <Confirmation
+            user={user}
+            {...props}
+          />
+        )}
+      />
+      
     </div>
-  );
+  )
 }
 
-export default App;
+// class App extends React.Component {
+//   constructor() {
+//     super(); 
+//     this.state = {
+//       user: {}
+//     }
+//   }
+
+//   render() {
+//     return (
+//       <div className="App">
+//         <Routes>
+//           <Route 
+//             path="/home" 
+//             element={<Home />}
+//           />
+//         </Routes>
+//       </div>
+//     )
+//   }
+// }
+
+
+export default withRouter(App);
