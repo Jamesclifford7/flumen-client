@@ -29,9 +29,3 @@ export default function Dashboard(props: {user: any}) {
         </>
     )
 }
-
-// 1. company name
-// 2. job title
-// 3. location
-// 4. estimated time to complete challenge
-// 5. quality of match

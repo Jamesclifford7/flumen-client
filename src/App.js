@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './App.css';
 import { Route, withRouter, useHistory } from 'react-router-dom'
-import Home from './components/LandingPage/index'
+import Login from './components/Login/index'
 import Dashboard from './components/Dashboard/index'
 import Challenge from './components/Challenge/index'
 import Confirmation from './components/ConfirmationPage/index'
@@ -34,7 +34,7 @@ function App() {
       <Route 
         path="/home"
         render={(props) => (
-          <Home 
+          <Login
             handleLogin={handleLogin}
             {...props}
           />
@@ -71,28 +71,5 @@ function App() {
     </div>
   )
 }
-
-// class App extends React.Component {
-//   constructor() {
-//     super(); 
-//     this.state = {
-//       user: {}
-//     }
-//   }
-
-//   render() {
-//     return (
-//       <div className="App">
-//         <Routes>
-//           <Route 
-//             path="/home" 
-//             element={<Home />}
-//           />
-//         </Routes>
-//       </div>
-//     )
-//   }
-// }
-
 
 export default withRouter(App);
