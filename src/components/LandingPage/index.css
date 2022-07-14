@@ -1,0 +1,25 @@
+.landing #landing-box-top {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    border-bottom: solid; 
+    border-width: 0.5px; 
+}
+
+.landing #landing-box-top div {
+    width: 50%; 
+    /* border: solid;  */
+    /* background-size: cover;  */
+}
+
+.landing #landing-box-top div h2, .landing #landing-box-top div p {
+    margin-left: 50px; 
+    margin-top: 50px; 
+    width: 80%; 
+}
+
+.landing #landing-box-top div img {
+    /* background-size: cover;  */
+    width: 100%; 
+    height: 100%; 
+}

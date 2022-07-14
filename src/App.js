@@ -5,6 +5,7 @@ import Login from './components/Login/index'
 import Dashboard from './components/Dashboard/index'
 import Challenge from './components/Challenge/index'
 import Confirmation from './components/ConfirmationPage/index'
+import Landing from './components/LandingPage/index'
 
 function App() {
   const [user, setUser] = useState({id: null, email: '', password: ''})
@@ -32,7 +33,15 @@ function App() {
   return (
     <div className="App">
       <Route 
-        path="/home"
+        exact path="/"
+        render={(props) => (
+          <Landing
+            {...props}
+          />
+        )}
+      />
+      <Route 
+        path="/login"
         render={(props) => (
           <Login
             handleLogin={handleLogin}

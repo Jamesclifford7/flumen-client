@@ -1,11 +1,10 @@
 import React from 'react'
-import TextField from '@mui/material/TextField'
 import './index.css'
 
-export default function Home(props: {handleLogin: any}) {
+export default function Login(props: {handleLogin: any}) {
     return (
-        <div className="home">
-            <h1>Amnis</h1>
+        <div className="login">
+            <h1>Flumen</h1>
             <h4>Please enter your login information below</h4>
             <form onSubmit={e => props.handleLogin(e)}>
                 <div className='input-container'>

@@ -4,7 +4,7 @@ import './index.css'
 export default function NavBar() {
     return (
         <nav>
-            <span>Amnis</span>
+            <span>Flumen</span>
             <ul>
                 <li>Logout</li>
             </ul>
