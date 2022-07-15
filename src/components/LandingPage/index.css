@@ -8,18 +8,70 @@
 
 .landing #landing-box-top div {
     width: 50%; 
-    /* border: solid;  */
-    /* background-size: cover;  */
 }
 
 .landing #landing-box-top div h2, .landing #landing-box-top div p {
     margin-left: 50px; 
     margin-top: 50px; 
     width: 80%; 
+    line-height: 1.6; 
 }
 
 .landing #landing-box-top div img {
-    /* background-size: cover;  */
     width: 100%; 
     height: 100%; 
+}
+
+.landing #landing-box-middle {
+    border-bottom: solid; 
+    border-width: 0.5px;
+    padding-bottom: 50px; 
+}
+
+.landing #landing-box-middle h2 {
+    margin-top: 80px;
+    text-align: center; 
+    padding-bottom: 80px; 
+}
+
+.landing #landing-box-middle .how-it-works {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+.landing #landing-box-middle .how-it-works div {
+    border: solid; 
+    padding: 30px 25px 150px 25px; 
+    width: 25%; 
+}
+
+.landing #landing-box-middle .how-it-works div h4 {
+    text-align: center; 
+}
+
+.landing #landing-box-middle .how-it-works div p {
+    width: 80%; 
+    text-align: center; 
+    padding-top: 20px; 
+    margin: 0 auto; 
+    line-height: 1.6; 
+}
+
+.landing #landing-box-bottom {
+    padding-bottom: 50px; 
+}
+
+.landing #landing-box-bottom div {
+    text-align: center; 
+}
+
+.landing #landing-box-bottom div h2 {
+    margin-top: 50px; 
+}
+
+.landing #landing-box-bottom div p {
+    margin: 0 auto; 
+    width: 60%; 
+    line-height: 1.6;
 }

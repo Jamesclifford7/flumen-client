@@ -2,6 +2,7 @@ import React from 'react'
 import './index.css'
 import { Link } from 'react-router-dom'
 import NavBar from '../NavBar/index'
+import {UserContext} from '../../App'
 
 export default function Dashboard(props: {user: any}) {
     const {email} = props.user
