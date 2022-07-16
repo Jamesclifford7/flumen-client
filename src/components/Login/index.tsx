@@ -1,8 +1,11 @@
 import React from 'react'
+import NavBar from '../NavBar/index'
 import './index.css'
 
 export default function Login(props: {handleLogin: any}) {
     return (
+        <>
+        <NavBar />
         <div className="login">
             <h1>Flumen</h1>
             <h4>Please enter your login information below</h4>
@@ -20,6 +23,7 @@ export default function Login(props: {handleLogin: any}) {
                 <button type="submit">Submit</button>
             </form>
         </div>
+        </>
     )
 }
 
