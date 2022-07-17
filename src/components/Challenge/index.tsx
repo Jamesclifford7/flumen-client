@@ -13,10 +13,9 @@ export default function Challenge() {
         role: string, 
         location: string, 
         match: number, 
-        question: string, 
+        challengeQuestion: string, 
         repositoryLink: string, 
         resume: File | null, 
-        // htmlExperience: number | null | any, 
         htmlExperience: any, 
         cssExperience: number | null | any, 
         javaScriptExperience: number | null | any, 
@@ -25,7 +24,6 @@ export default function Challenge() {
         invention: string,
         novel: string, 
         additional: string,  
-
     }
 
     const [formData, setFormData] = useState({
@@ -34,7 +32,7 @@ export default function Challenge() {
         role: 'React', 
         location: 'React', 
         match: 7, 
-        question: 'Create a bathtub using JavaScript (preferably React). There should be a button that adds water to the tub, and a button that removes water. Bonus points if you can create this using React hooks.', 
+        challengeQuestion: 'Create a bathtub using JavaScript (preferably React). There should be a button that adds water to the tub, and a button that removes water. Bonus points if you can create this using React hooks.', 
         repositoryLink: '', 
         resume: null, 
         htmlExperience: null, 
@@ -58,7 +56,7 @@ export default function Challenge() {
             role: prevState.role, 
             location: prevState.location, 
             match: prevState.match, 
-            question: prevState.question, 
+            challengeQuestion: prevState.challengeQuestion, 
             repositoryLink: data.repositoryLink, 
             resume: prevState.resume, 
             htmlExperience: data.htmlExperience, 
@@ -69,7 +67,7 @@ export default function Challenge() {
             invention: data.invention, 
             novel: data.novel, 
             additional: data.additional
-        })); 
+        }))
 
         history.push('/confirmation')
     }
@@ -88,13 +86,11 @@ export default function Challenge() {
                     <h3>Match: 7/10 based on your skills and experience</h3>
                 </section>
                 <section className="challenge-info">
-                    {/* <form onSubmit={event => handleSubmit(event)}> */}
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="challenge-description">
                             <h2>Challenge description:</h2>
-                            <p>Create a bathtub using JavaScript (preferably React). There should be a button that adds water to the tub, and a button that removes water. Bonus points if you can create this using React hooks.</p>
+                            <p>{formData.challengeQuestion}</p>
                             <label>Paste your github repository here:</label>
-                            {/* <input type="text" name="repository" id="repository" /> */}
                             <input {...register("repositoryLink")}/>
                             <h4>Resume Upload</h4>
                             <input type="file" name="repository" id="repository" />
@@ -102,9 +98,8 @@ export default function Challenge() {
                         <div className="additional-questions">
                             <h2>Additional Questions</h2>
                             <div className="question">
-                                <label htmlFor="html">How many years of professional HTML experience do you have?</label>
-                                {/* <select name="html" id="html"> */}
-                                <select id="htmlExperience" {...register("htmlExperience")}>
+                                <label>How many years of professional HTML experience do you have?</label>
+                                <select {...register("htmlExperience")}>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -114,8 +109,7 @@ export default function Challenge() {
                                 </select>
                             </div>
                             <div className="question">
-                                <label htmlFor="css">How many years of professional CSS experience do you have?</label>
-                                {/* <select name="css" id="css"> */}
+                                <label>How many years of professional CSS experience do you have?</label>
                                 <select {...register("cssExperience")}>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
@@ -126,8 +120,7 @@ export default function Challenge() {
                                 </select>
                             </div>
                             <div className="question">
-                                <label htmlFor="javascript">How many years of professional JavaScript experience do you have?</label>
-                                {/* <select name="javascript" id="javascript"> */}
+                                <label>How many years of professional JavaScript experience do you have?</label>
                                 <select {...register("javaScriptExperience")}>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
@@ -138,8 +131,7 @@ export default function Challenge() {
                                 </select>
                             </div>
                             <div className="question">
-                                <label htmlFor="react">How many years of professional React experience do you have?</label>
-                                {/* <select name="react" id="react"> */}
+                                <label>How many years of professional React experience do you have?</label>
                                 <select {...register("reactExperience")}>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
@@ -150,26 +142,20 @@ export default function Challenge() {
                                 </select>
                             </div>
                             <div className="question">
-                                <label htmlFor="one-sentence-description">Describe yourself in one sentence:</label>
-                                {/* <input type="text" name="one-sentence-description" id="one-sentence-description" /> */}
+                                <label>Describe yourself in one sentence:</label>
                                 <input type="text" {...register("description")} />
                             </div>
                             <div className="question">
-                                <label htmlFor="greatest-invention">What is the greatest invention?</label>
-                                {/* <input type="text" name="greatest-invention" id="greatest-invention" /> */}
+                                <label>What is the greatest invention?</label>
                                 <input type="text" {...register("invention")} />
 
                             </div>
                             <div className="question">
-                                <label htmlFor="favorite-novel">What is your favovorite novel?</label>
-                                {/* <input type="text" name="favorite-novel" id="favorite-novel"/> */}
+                                <label>What is your favovorite novel?</label>
                                 <input type="text" {...register("novel")} />
-
                             </div>
-                            <label htmlFor="additional">Anything else you would like to add?</label>
-                            {/* <textarea name="additional-info" id="additional-info" /> */}
+                            <label>Anything else you would like to add?</label>
                             <textarea {...register("additional")} />
-
                         </div>
                         <button type="submit">Submit</button>
                     </form>
