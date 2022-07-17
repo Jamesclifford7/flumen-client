@@ -20,7 +20,7 @@ export default function Dashboard(props: {user: any}) {
                         challenges.map((challenge, idx) => {
                             return <div className="challenge" key={idx}> 
                             <div className='challenge-info'>
-                                <Link to={`/challenge/${challenge.id}`}><h2>Amazon</h2></Link>
+                                <Link to={`/challenge/${challenge.id}`}><h2>{challenge.company}</h2></Link>
                                 <h4>{challenge.role}</h4>
                                 <h5>{challenge.location}</h5>
                                 <h5>Est. completion time: 6hrs</h5>

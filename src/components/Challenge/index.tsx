@@ -87,7 +87,7 @@ export default function Challenge() {
                         <div className="challenge-description">
                             <h2>Challenge description:</h2>
                             <p>{formData.challengeQuestion}</p>
-                            <label>Paste your github repository here:</label>
+                            <label>Paste your answer submission here:</label>
                             <input {...register("challengeAnswer")}/>
                             <h4>Resume Upload</h4>
                             <input type="file" name="repository" id="repository" />
