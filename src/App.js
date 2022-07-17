@@ -35,7 +35,7 @@ function App() {
       }); 
       history.push('/dashboard'); 
     } else {
-      console.log('user not found')
+      console.log('user not found'); 
     }
     
   }
@@ -71,7 +71,7 @@ function App() {
           )}
         />
         <Route 
-          path="/challenge"
+          path="/challenge/:id"
           render={(props) => (
             <Challenge 
               user={user}

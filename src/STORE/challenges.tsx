@@ -1,26 +1,13 @@
-type FormValues = {
-    userId: number, 
-    company: string,
-    role: string, 
-    location: string, 
-    match: number, 
-    challengeQuestion: string, 
-    repositoryLink: string, 
-    resume: File | null, 
-    professionalQuestions: Array<String>, 
-    personalityQuestions: Array<String>, 
-    additional: string, 
-}
-
 export const challenges = [
     {
+        id: 1, 
         userId: 1, 
         company: 'Amazon', 
-        role: 'React', 
-        location: 'React', 
+        role: 'React Developer', 
+        location: 'Remote', 
         match: 7, 
         challengeQuestion: 'Create a bathtub using JavaScript (preferably React). There should be a button that adds water to the tub, and a button that removes water. Bonus points if you can create this using React hooks.', 
-        repositoryLink: '', 
+        challengeAnswer: '', 
         resume: null, 
         professionalQuestions: [
             {
@@ -53,34 +40,32 @@ export const challenges = [
                 question: "What is your favovorite novel?", 
                 answer: ""
             }, 
-            {
-                question: "Anything else you would like to add?", 
-                answer: ""
-            }
         ], 
-        additional: 'Is there anything else you would like to add', 
+        additional: '', 
     }, 
     {
+        id: 2, 
         userId: 1, 
         company: 'Amazon', 
         role: 'React', 
         location: 'React', 
         match: 7, 
         challengeQuestion: 'Create a bathtub using JavaScript (preferably React). There should be a button that adds water to the tub, and a button that removes water. Bonus points if you can create this using React hooks.', 
-        repositoryLink: '', 
+        challengeAnswer: '', 
         resume: null, 
         professionalQuestions: [], 
         personalityQuestions: [], 
         additional: '', 
     }, 
     {
+        id: 3, 
         userId: 1, 
         company: 'Amazon', 
         role: 'React', 
         location: 'React', 
         match: 7, 
         challengeQuestion: 'Create a bathtub using JavaScript (preferably React). There should be a button that adds water to the tub, and a button that removes water. Bonus points if you can create this using React hooks.', 
-        repositoryLink: '', 
+        challengeAnswer: '', 
         resume: null, 
         professionalQuestions: [], 
         personalityQuestions: [], 
