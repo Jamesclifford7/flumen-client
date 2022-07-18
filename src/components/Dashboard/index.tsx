@@ -1,7 +1,6 @@
 import React from 'react'
 import './index.css'
 import { Link } from 'react-router-dom'
-// import NavBar from '../NavBar/index'
 import NavBar from '../NavBar/index'
 import {challenges} from '../../STORE/challenges'
 

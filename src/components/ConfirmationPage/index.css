@@ -1,3 +1,11 @@
 .confirmation {
     text-align: center; 
+    background-image: url('../LandingPage/images/background\ 2.png');
+    background-size: cover;
+    padding-bottom: 500px; 
+}
+
+.confirmation h1 {
+    margin: 0; 
+    padding-top: 50px; 
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useLayoutEffect} from 'react'
 import './index.css'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import { useForm, SubmitHandler, useFieldArray } from "react-hook-form";
@@ -11,6 +11,10 @@ export default function Challenge() {
     const idNumber = Number(id)
     const challenge = challenges.filter((challenge) => challenge.id === idNumber)
     const [formData, setFormData] = useState(challenge[0])
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
 
     type FormValues = {
         id: number | string, 
@@ -74,7 +78,7 @@ export default function Challenge() {
         <>
             <NavBar />
             <div className="challenge-container">
-                <div>
+                <div className='back'>
                     <Link to="/dashboard">Back to Results</Link>
                 </div>
                 <section className='company-info'>
@@ -86,7 +90,7 @@ export default function Challenge() {
                     <h3>{formData.match}/10 match based on your skills and experience</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="challenge-description">
-                            <h2>Challenge:</h2>
+                            <h2>Challenge</h2>
                             <p>{formData.challengeQuestion}</p>
                             {/* <label>Paste your answer submission here:</label> */}
                             <label>{formData.challengeAnswerLabel}: </label>

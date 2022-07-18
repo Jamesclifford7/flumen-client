@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useLayoutEffect} from 'react'
 import NavBar from '../NavBar/index'
 import './index.css'
 
 export default function Login(props: {handleLogin: any}) {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
+
     return (
         <>
             <NavBar />

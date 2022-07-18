@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useLayoutEffect} from 'react'
 import {Link} from 'react-router-dom'
 import NavBar from '../NavBar/index'
 import './index.css'
 
 export default function Confirmation() {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
+
     return (
         <>
             <NavBar />
