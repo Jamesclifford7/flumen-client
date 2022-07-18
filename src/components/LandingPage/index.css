@@ -1,3 +1,17 @@
+.landing #landing-image {
+    background-image: url('./images/background\ 2.png');
+    background-size: cover; 
+    height: 550px; 
+    display: flex;
+    align-items: center;
+}
+
+.landing #landing-image h1 {
+    margin: 0; 
+    color: white; 
+    margin-left: 200px; 
+}
+
 .landing #landing-box-top {
     display: flex; 
     flex-direction: row; 
@@ -33,9 +47,9 @@
 }
 
 .landing #landing-box-middle h2 {
-    margin-top: 80px;
+    margin-top: 60px;
     text-align: center; 
-    padding-bottom: 80px; 
+    padding-bottom: 50px; 
 }
 
 .landing #landing-box-middle .how-it-works {

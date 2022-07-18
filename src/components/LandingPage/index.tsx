@@ -11,8 +11,12 @@ import { faMagnifyingGlass, faCheck, faHandshakeSimple } from '@fortawesome/free
 
 export default function Landing() {
     return (
+        <>
+        <NavBar />
         <div className="landing">
-            <NavBar />
+            <section id="landing-image">
+                <h1>A skills-based hiring platform for both candidates and HR teams.</h1>
+            </section>
             <section id="landing-box-top">
                 <div>
                     <h2>Welcome to Flumen!</h2>
@@ -32,7 +36,7 @@ export default function Landing() {
                         <p>Explore open positions based on your skills, experience, and interests.</p>
                     </div>
                     <div>
-                        <h4>Complete challenges</h4>
+                        <h4>Complete Challenges</h4>
                         <FontAwesomeIcon icon={faCheck} />
                         <p>Complete technical challenges that resemble work you would actually be doing on a daily basis for your employer.</p>
                     </div>
@@ -53,11 +57,12 @@ export default function Landing() {
                     <h2>Ready to Rock and Roll?</h2>
                     <button>Sign Up</button>
                     <h4>Already have an account?</h4>
-                    <Link to="/login">Login</Link>
+                    <button><Link to="/login">Login</Link></button>
                     {/* <button>Login</button> */}
                 </div>
             </section>
             {/* <footer></footer> */}
         </div>
+        </>
     )
 }

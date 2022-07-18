@@ -14,7 +14,7 @@ export default function NavBar() {
             </ul>
         </nav>
         : <nav>
-            <span>Flumen</span>
+            <h4>Flumen</h4>
             <ul>
                 <li>Logout</li>
             </ul>
