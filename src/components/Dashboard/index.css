@@ -3,12 +3,17 @@
 }
 
 .challenge {
-    border: solid; 
+    border: solid;
+    border-top: none;  
     width: 75%; 
     margin: 0 auto; 
     display: flex; 
     flex-direction: row; 
     justify-content: space-between;
+}
+
+.challenge:first-child {
+    border-top: solid !important; 
 }
 
 .challenge h2, .challenge h4 {
@@ -22,3 +27,4 @@
 .challenge .challenge-match {
     margin-right: 20px; 
 }
+

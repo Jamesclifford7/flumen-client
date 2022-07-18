@@ -20,6 +20,7 @@ export default function Challenge() {
         location: string, 
         match: number, 
         challengeQuestion: string, 
+        challengeAnswerLabel: string, 
         challengeAnswer: string, 
         resume: File | null, 
         professionalQuestions: Array<object>, 
@@ -77,20 +78,22 @@ export default function Challenge() {
                     <Link to="/dashboard">Back to Results</Link>
                 </div>
                 <section className='company-info'>
-                    <h1>Company: {formData.company}</h1>
-                    <h2>Role: {formData.role}</h2>
-                    <h3>Location: {formData.location}</h3>
-                    <h3>Match: {formData.match}/10 based on your skills and experience</h3>
+                    <h2>{formData.company}</h2>
+                    <h2>{formData.role}</h2>
+                    <h2>{formData.location}</h2>
                 </section>
                 <section className="challenge-info">
+                    <h3>{formData.match}/10 match based on your skills and experience</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="challenge-description">
-                            <h2>Challenge description:</h2>
+                            <h2>Challenge:</h2>
                             <p>{formData.challengeQuestion}</p>
-                            <label>Paste your answer submission here:</label>
+                            {/* <label>Paste your answer submission here:</label> */}
+                            <label>{formData.challengeAnswerLabel}: </label>
+
                             <input {...register("challengeAnswer")}/>
-                            <h4>Resume Upload</h4>
-                            <input type="file" name="repository" id="repository" />
+                            {/* <h4>Resume Upload</h4>
+                            <input type="file" name="repository" id="repository" /> */}
                         </div>
                         <div className="additional-questions">
                             <h2>Additional Questions</h2>

@@ -8,7 +8,7 @@ export default function NavBar() {
     return (
         userDetails.id === null
         ? <nav>
-            <span>Flumen</span>
+            <h4>Flumen</h4>
             <ul>
                 <li>Login</li>
             </ul>

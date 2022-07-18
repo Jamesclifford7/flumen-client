@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './App.css';
 import { Route, withRouter, useHistory } from 'react-router-dom'
 import Login from './components/Login/index'
@@ -8,14 +8,6 @@ import Confirmation from './components/ConfirmationPage/index'
 import Landing from './components/LandingPage/index'
 
 export const UserContext = React.createContext()
-
-// function UserProvider(user, {children}) {
-//   return (
-//     <UserContext.Provider value={user}>
-//       {children}
-//     </UserContext.Provider>
-//   )
-// }
 
 function App() {
   const [user, setUser] = useState({id: null, email: '', password: ''})

@@ -1,10 +1,12 @@
 nav {
-    border-bottom: solid; 
+    border-bottom: solid;
+    border-bottom-width: 0.5px; 
     padding-top: 10px; 
     padding-bottom: 10px; 
+    /* background-color: #F2F4F3; */
 }
 
-nav span {
+nav h4 {
     display: inline-block;
     width: 30%; 
     margin-left: 30px; 

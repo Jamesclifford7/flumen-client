@@ -8,7 +8,7 @@ export default function Confirmation() {
         <>
             <NavBar />
             <div className="confirmation">
-                <h1>Your submission has been recived!</h1>
+                <h1>Your submission has been received!</h1>
                 <h2>Expect to hear from us within 5 - 10 days.</h2>
                 <Link to="/dashboard">Back to search</Link>
             </div>

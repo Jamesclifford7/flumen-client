@@ -6,7 +6,9 @@ export const challenges = [
         role: 'React Developer', 
         location: 'Remote', 
         match: 8, 
+        estimatedCompletionTime: 4, 
         challengeQuestion: 'Create a bathtub using JavaScript (preferably React). There should be a button that adds water to the tub, and a button that removes water. Bonus points if you can create this using React hooks.', 
+        challengeAnswerLabel: 'Paste your GitHub repository here', 
         challengeAnswer: '', 
         resume: null, 
         professionalQuestions: [
@@ -50,7 +52,9 @@ export const challenges = [
         role: 'Copywriter ', 
         location: 'Remote', 
         match: 6, 
+        estimatedCompletionTime: 2, 
         challengeQuestion: 'Write 500 words on how NFTs are disrupting the entertainment industry.', 
+        challengeAnswerLabel: 'Submit a link to your Google doc here',
         challengeAnswer: '', 
         resume: null, 
         professionalQuestions: [
@@ -86,7 +90,9 @@ export const challenges = [
         role: 'UX Designer', 
         location: 'Remote', 
         match: 5, 
+        estimatedCompletionTime: 5, 
         challengeQuestion: 'Create wireframes for a landing page, login page, and dashboard for a file-sharing application (i.e. dropbox).', 
+        challengeAnswerLabel: 'Submit a link to your Figma files here',
         challengeAnswer: '', 
         resume: null, 
         professionalQuestions: [

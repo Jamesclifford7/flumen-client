@@ -3,11 +3,15 @@
     flex-direction: row; 
     justify-content: space-between;
     border-bottom: solid; 
-    border-width: 0.5px; 
+    border-width: 0.3px; 
 }
 
 .landing #landing-box-top div {
     width: 50%; 
+}
+
+.landing #landing-box-top div h2 {
+    color: #1098F7; 
 }
 
 .landing #landing-box-top div h2, .landing #landing-box-top div p {
@@ -38,16 +42,28 @@
     display: flex; 
     flex-direction: row; 
     justify-content: space-around;
+    /* background-color: #FCFAF9; */
 }
 
 .landing #landing-box-middle .how-it-works div {
-    border: solid; 
+    /* border: solid;  */
+    border-radius: 25px; 
     padding: 30px 25px 150px 25px; 
     width: 25%; 
+    /* color: #1098F7; 
+    background-color: white;  */
+    /* background-color:#D9F0FF;  */
+    background-color: #bfebff; 
+    color: black; 
+    text-align: center; 
 }
 
 .landing #landing-box-middle .how-it-works div h4 {
     text-align: center; 
+}
+
+.landing #landing-box-middle .how-it-works div svg {
+    height: 40px; 
 }
 
 .landing #landing-box-middle .how-it-works div p {
@@ -58,12 +74,21 @@
     line-height: 1.6; 
 }
 
-.landing #landing-box-bottom {
+/* .landing #landing-box-bottom {
     padding-bottom: 50px; 
+} */
+
+.landing #landing-box-bottom .philosophy {
+    padding-bottom: 30px; 
 }
 
 .landing #landing-box-bottom div {
     text-align: center; 
+}
+
+.landing #landing-box-bottom div img {
+    height: 200px; 
+    width: auto; 
 }
 
 .landing #landing-box-bottom div h2 {
@@ -74,4 +99,10 @@
     margin: 0 auto; 
     width: 60%; 
     line-height: 1.6;
+}
+
+.landing #landing-box-bottom .signup {
+    padding-top: 15px; 
+    padding-bottom: 30px; 
+    background-color: #bfebff; 
 }

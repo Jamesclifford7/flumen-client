@@ -3,13 +3,27 @@
     margin-left: 40px; 
 }
 
+.challenge-container .company-info {
+    margin-right: 40px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.challenge-container .company-info h2  {
+    display: inline; 
+}
+
 .company-info {
     margin-top: 50px; 
     margin-left: 40px; 
 }
 
+.challenge-info h3 {
+    text-align: center;
+}
+
 .challenge-info form {
-    margin-top: 100px; 
+    margin-top: 80px; 
 }
 
 .challenge-info form button {
@@ -37,7 +51,7 @@
 
 .challenge-info form .additional-questions .question {
     text-align: left; 
-    width: 40%; 
+    width: 50%; 
     margin: 0 auto; 
     margin-bottom: 25px; 
 }
