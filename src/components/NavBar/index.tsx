@@ -2,7 +2,7 @@ import React from 'react'
 import { UserContext } from '../../App'
 import './index.css'
 
-export default function NavBar() {
+export default function NavBar(props: {handleLogout: (event: any) => void}) {
     const userDetails = React.useContext(UserContext)
 
     return (
@@ -16,7 +16,7 @@ export default function NavBar() {
         : <nav>
             <h4>Flumen</h4>
             <ul>
-                <li>Logout</li>
+                <li><button onClick={event => props.handleLogout(event)}>Logout</button></li>
             </ul>
         </nav>
     )

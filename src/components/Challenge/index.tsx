@@ -5,7 +5,7 @@ import { useForm, SubmitHandler, useFieldArray } from "react-hook-form";
 import NavBar from '../NavBar/index'
 import {challenges} from '../../STORE/challenges'
 
-export default function Challenge() {
+export default function Challenge(props: {handleLogout: () => void}) {
     const history = useHistory()
     const {id} = useParams<{id?: string}>()
     const idNumber = Number(id)
@@ -76,7 +76,7 @@ export default function Challenge() {
 
     return (
         <>
-            <NavBar />
+            <NavBar handleLogout={props.handleLogout} />
             <div className="challenge-container">
                 <div className='back'>
                     <Link to="/dashboard">Back to Results</Link>

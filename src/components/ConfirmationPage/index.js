@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom'
 import NavBar from '../NavBar/index'
 import './index.css'
 
-export default function Confirmation() {
+export default function Confirmation(props) {
     useLayoutEffect(() => {
         window.scrollTo(0, 0)
     });
 
     return (
         <>
-            <NavBar />
+            <NavBar handleLogout={props.handleLogout} />
             <div className="confirmation">
                 <h1>Your submission has been received!</h1>
                 <h2>Expect to hear from us within 5 - 10 days.</h2>

@@ -5,12 +5,12 @@ import NavBar from '../NavBar/index'
 import {challenges} from '../../STORE/challenges'
 
 
-export default function Dashboard(props: {user: any}) {
+export default function Dashboard(props: {user: any, handleLogout: () => void}) {
     const {email} = props.user
     
     return (
         <>
-            <NavBar />
+            <NavBar handleLogout={props.handleLogout} />
             <div className="dashboard">
                 <h2>Welcome back, {email}!</h2>
                 <h4>Open Challenges:</h4>

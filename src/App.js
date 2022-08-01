@@ -32,6 +32,16 @@ function App() {
     
   }
 
+  const handleLogout = (event) => {
+    event.preventDefault(); 
+    setUser({
+      id: null, 
+      email: '', 
+      password: ''
+    }); 
+    history.push('/')
+  }
+
 
   return (
     <div className="App">
@@ -58,6 +68,7 @@ function App() {
           render={(props) => (
             <Dashboard 
               user={user}
+              handleLogout={handleLogout}
               {...props}
             />
           )}
@@ -67,6 +78,7 @@ function App() {
           render={(props) => (
             <Challenge 
               user={user}
+              handleLogout={handleLogout}
               {...props}
             />
           )}
@@ -75,6 +87,7 @@ function App() {
           path="/confirmation"
           render={(props) => (
             <Confirmation
+              handleLogout={handleLogout}
               user={user}
               {...props}
             />

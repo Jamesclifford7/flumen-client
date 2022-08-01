@@ -2,14 +2,14 @@ import React, {useLayoutEffect} from 'react'
 import NavBar from '../NavBar/index'
 import './index.css'
 
-export default function Login(props: {handleLogin: any}) {
+export default function Login(props: {handleLogin: (event: any) => void; handleLogout: () => void}) {
     useLayoutEffect(() => {
         window.scrollTo(0, 0)
     });
 
     return (
         <>
-            <NavBar />
+            <NavBar handleLogout={props.handleLogout} />
             <div className="login">
                 <h2>Please enter your login information below</h2>
                 <form onSubmit={e => props.handleLogin(e)}>

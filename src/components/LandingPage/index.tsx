@@ -1,6 +1,5 @@
 import React from 'react'
 import NavBar from '../NavBar'
-import developerImage from './images/developer-photo-1.jpeg'
 import meetingImage from './images/business-meeting-stock-image.webp'
 import lightBulb from './images/lightbulb.jpeg'
 import {Link} from 'react-router-dom'
@@ -9,10 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faCheck, faHandshakeSimple } from '@fortawesome/free-solid-svg-icons'
 
 
-export default function Landing() {
+export default function Landing(props: {handleLogout: () => void}) {
     return (
         <>
-        <NavBar />
+        <NavBar handleLogout={props.handleLogout} />
         <div className="landing">
             <section id="landing-image">
                 <h1>A skills-based hiring platform for both candidates and HR teams.</h1>
