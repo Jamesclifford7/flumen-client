@@ -1,9 +1,9 @@
 import React, {useLayoutEffect} from 'react'
 import {Link} from 'react-router-dom'
-import NavBar from '../NavBar/index'
+import NavBar from '../../NavBar/index'
 import './index.css'
 
-export default function Confirmation(props) {
+export default function CandidateConfirmation(props) {
     useLayoutEffect(() => {
         window.scrollTo(0, 0)
     });

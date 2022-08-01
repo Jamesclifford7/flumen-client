@@ -1,11 +1,11 @@
 import React from 'react'
 import './index.css'
 import { Link } from 'react-router-dom'
-import NavBar from '../NavBar/index'
-import {challenges} from '../../STORE/challenges'
+import NavBar from '../../NavBar/index'
+import {challenges} from '../../../STORE/challenges'
 
 
-export default function Dashboard(props: {user: any, handleLogout: () => void}) {
+export default function CandidateDashboard(props: {user: any, handleLogout: () => void}) {
     const {email} = props.user
     
     return (

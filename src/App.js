@@ -2,15 +2,16 @@ import React, {useState} from 'react'
 import './App.css';
 import { Route, withRouter, useHistory } from 'react-router-dom'
 import Login from './components/Login/index'
-import Dashboard from './components/Dashboard/index'
-import Challenge from './components/Challenge/index'
-import Confirmation from './components/ConfirmationPage/index'
+import CandidateDashboard from './components/Candidates/Dashboard/index'
+import CandidateChallenge from './components/Candidates/Challenge/index'
+import CandidateConfirmation from './components/Candidates/ConfirmationPage/index'
 import Landing from './components/LandingPage/index'
+import EmployerDashboard from './components/Employers/Dashboard';
 
 export const UserContext = React.createContext()
 
 function App() {
-  const [user, setUser] = useState({id: null, email: '', password: ''})
+  const [user, setUser] = useState({id: null, email: '', password: '', account: ''})
   const history = useHistory()
 
   const handleLogin = (event) => {
@@ -23,10 +24,20 @@ function App() {
       setUser({
         id: 1, 
         email: email, 
-        password: password
+        password: password, 
+        account: 'candidate'
       }); 
-      history.push('/dashboard'); 
-    } else {
+      history.push('/candidate-dashboard'); 
+    } else if (email === "stevejobs@gmail.com" && password === "password") {
+      setUser({
+        id: 2, 
+        email: email, 
+        password: password, 
+        account: 'employer'
+      }); 
+      history.push('/employer-dashboard'); 
+    }
+    else {
       console.log('user not found'); 
     }
     
@@ -37,7 +48,8 @@ function App() {
     setUser({
       id: null, 
       email: '', 
-      password: ''
+      password: '', 
+      account: '', 
     }); 
     history.push('/')
   }
@@ -64,9 +76,9 @@ function App() {
           )}
         />
         <Route 
-          path="/dashboard"
+          path="/candidate-dashboard"
           render={(props) => (
-            <Dashboard 
+            <CandidateDashboard 
               user={user}
               handleLogout={handleLogout}
               {...props}
@@ -76,7 +88,7 @@ function App() {
         <Route 
           path="/challenge/:id"
           render={(props) => (
-            <Challenge 
+            <CandidateChallenge 
               user={user}
               handleLogout={handleLogout}
               {...props}
@@ -86,9 +98,19 @@ function App() {
         <Route 
           path="/confirmation"
           render={(props) => (
-            <Confirmation
+            <CandidateConfirmation
               handleLogout={handleLogout}
               user={user}
+              {...props}
+            />
+          )}
+        />
+        <Route 
+          path="/employer-dashboard"
+          render={(props) => (
+            <EmployerDashboard 
+              user={user}
+              handleLogout={handleLogout}
               {...props}
             />
           )}

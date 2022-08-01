@@ -2,10 +2,10 @@ import React, {useState, useLayoutEffect} from 'react'
 import './index.css'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import { useForm, SubmitHandler, useFieldArray } from "react-hook-form";
-import NavBar from '../NavBar/index'
-import {challenges} from '../../STORE/challenges'
+import NavBar from '../../NavBar/index'
+import {challenges} from '../../../STORE/challenges'
 
-export default function Challenge(props: {handleLogout: () => void}) {
+export default function CandidateChallenge(props: {handleLogout: () => void}) {
     const history = useHistory()
     const {id} = useParams<{id?: string}>()
     const idNumber = Number(id)
