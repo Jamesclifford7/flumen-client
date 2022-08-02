@@ -26,20 +26,19 @@ export default function EmployerChallenge(props: {handleLogout: () => void}) {
                     <h2>{formData.location}</h2>
                 </section>
                 <section className="challenge-info">
-                    {/* <div> */}
-                        <div className="challenge-description">
-                            <h2>Challenge:</h2>
-                            <p>{formData.challengeQuestion}</p>
-                        {/* </div> */}
-                    </div>
+                    {/* <div className="challenge-description"> */}
+                        <h2>Challenge:</h2>
+                        <p>{formData.challengeQuestion}</p>
+                    {/* </div> */}
                 </section>
                 <section className="submissions">
                     <h2>Submissions: </h2>
                     {
                         challengeSubmissions.map((challengeSubmission, idx) => {
                             return (
-                                <div>
-                                    <h3>{challengeSubmission.candidateName}</h3>
+                                <div className='submission'>
+                                    <Link to={`/submission/${challengeSubmission.userId}`}><h3>{challengeSubmission.candidateName}</h3></Link>
+                                    <h5>{challengeSubmission.match}/10 Match</h5>
                                 </div>
                             )
                         })

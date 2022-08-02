@@ -14,7 +14,7 @@ export default function CandidateConfirmation(props) {
             <div className="confirmation">
                 <h1>Your submission has been received!</h1>
                 <h2>Expect to hear from us within 5 - 10 days.</h2>
-                <Link to="/dashboard">Back to search</Link>
+                <Link to="/candidate-dashboard">Back to search</Link>
             </div>
         </>
     )

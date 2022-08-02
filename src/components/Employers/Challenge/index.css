@@ -1,7 +1,41 @@
 .employer-challenge-container {
-    height: 100vh; 
+    /* height: 100vh;  */
+    background-image: url('../../LandingPage/images/background\ 2.png');
+    background-size: cover;
+    padding-bottom: 50px; 
+}
+
+.employer-challenge-container .back {
+    padding-top: 30px; 
+    margin-left: 30px; 
+}
+
+.employer-challenge-container .company-info {
+    margin-right: 40px; 
+    display: flex;
+    justify-content: space-between;
 }
 
 .employer-challenge-container .challenge-info {
     text-align: center;
+}
+
+.employer-challenge-container .challenge-info p {
+    width: 70%; 
+    margin: 0 auto; 
+}
+
+.employer-challenge-container .submissions {
+    text-align: center; 
+}
+
+.employer-challenge-container .submissions .submission {
+    background-color: white;
+    width: 70%; 
+    margin: 0 auto;
+    padding: 20px 60px; 
+    margin-bottom: 10px; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
 }
