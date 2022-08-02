@@ -6,7 +6,8 @@ import CandidateDashboard from './components/Candidates/Dashboard/index'
 import CandidateChallenge from './components/Candidates/Challenge/index'
 import CandidateConfirmation from './components/Candidates/ConfirmationPage/index'
 import Landing from './components/LandingPage/index'
-import EmployerDashboard from './components/Employers/Dashboard';
+import EmployerDashboard from './components/Employers/Dashboard'
+import EmployerChallenge from './components/Employers/Challenge'
 
 export const UserContext = React.createContext()
 
@@ -109,6 +110,16 @@ function App() {
           path="/employer-dashboard"
           render={(props) => (
             <EmployerDashboard 
+              user={user}
+              handleLogout={handleLogout}
+              {...props}
+            />
+          )}
+        />
+        <Route 
+          path="/employer-challenge/:id"
+          render={(props) => (
+            <EmployerChallenge
               user={user}
               handleLogout={handleLogout}
               {...props}

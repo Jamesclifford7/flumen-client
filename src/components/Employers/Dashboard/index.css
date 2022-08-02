@@ -23,6 +23,12 @@
     padding-bottom: 40px; 
 }
 
+.employer-dashboard .challenges-container .challenge a {
+    text-decoration: none; 
+    width: 100%; 
+    color: black; 
+}
+
 .employer-dashboard .challenges-container .challenge div {
     display: flex;
     flex-direction: row; 
