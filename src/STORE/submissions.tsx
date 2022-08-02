@@ -15,25 +15,29 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional HTML experience do you have?", 
-                answer: 5
+                answer: 5, 
+                questionLabel: "Years of professional HTML experience"
             }, 
             {
                 question: "How many years of professional CSS experience do you have?", 
-                answer: 5
+                answer: 5, 
+                questionLabel: "Years of professional CSS experience"
             }, 
             {
                 question: "How many years of professional JavaScript experience do you have?", 
-                answer: 5
+                answer: 5, 
+                questionLabel: "Years of profession JavaScript experience"
             },  
             {
                 question: "How many years of professional React experience do you have?", 
-                answer: 5
+                answer: 5, 
+                questionLabel: "Years of professional React experience"
             }
         ], 
         personalityQuestions: [
             {
                 question: "Describe yourself in one sentence:", 
-                answer: "Full stack software engineer with 5 years of professional experience."
+                answer: "Full stack software engineer with 5 years of professional experience.", 
             }, 
             {
                 question: "What is the greatest invention?", 
@@ -62,19 +66,23 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional HTML experience do you have?", 
-                answer: 4
+                answer: 4, 
+                questionLabel: "Years of professional HTML experience"
             }, 
             {
                 question: "How many years of professional CSS experience do you have?", 
-                answer: 4
+                answer: 4, 
+                questionLabel: "Years of professional CSS experience"
             }, 
             {
                 question: "How many years of professional JavaScript experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional JavaScript experience"
             },  
             {
                 question: "How many years of professional React experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional React experience"
             }
         ], 
         personalityQuestions: [
@@ -109,25 +117,29 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional HTML experience do you have?", 
-                answer: 5
+                answer: 5, 
+                questionLabel: "Years of professional HTML experience"
             }, 
             {
                 question: "How many years of professional CSS experience do you have?", 
-                answer: 5
+                answer: 5, 
+                questionLabel: "Years of professional CSS experience"
             }, 
             {
                 question: "How many years of professional JavaScript experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLabel: "Years of professional JavaScript experience"
             },  
             {
                 question: "How many years of professional React experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLabel: "Years of professional React experience"
             }
         ], 
         personalityQuestions: [
             {
                 question: "Describe yourself in one sentence:", 
-                answer: "Love the outdoors and writing code."
+                answer: "Love the outdoors and writing code.", 
             }, 
             {
                 question: "What is the greatest invention?", 
@@ -156,19 +168,23 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional HTML experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional HTML experience"
             }, 
             {
                 question: "How many years of professional CSS experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional CSS experience"
             }, 
             {
                 question: "How many years of professional JavaScript experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional JavaScript experience"
             },  
             {
                 question: "How many years of professional React experience do you have?", 
-                answer: 1
+                answer: 1, 
+                questionLabel: "Years of professional React experience"
             }
         ], 
         personalityQuestions: [
@@ -203,19 +219,23 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional HTML experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLabel: "Years of professional HTML experience"
             }, 
             {
                 question: "How many years of professional CSS experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLabel: "Years of professional CSS experience"
             }, 
             {
                 question: "How many years of professional JavaScript experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLabel: "Years of professional JavaScript experience"
             },  
             {
                 question: "How many years of professional React experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional React experience"
             }
         ], 
         personalityQuestions: [
@@ -250,11 +270,13 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional copywriting experience do you have?", 
-                answer: 6
+                answer: 6, 
+                questionLabel: "Years of professional copywriting experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 4
+                answer: 4, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [
@@ -289,11 +311,13 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional copywriting experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLabel: "Years of professional copywriting experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 4
+                answer: 4, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [
@@ -328,11 +352,13 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional copywriting experience do you have?", 
-                answer: 5
+                answer: 5, 
+                questionLabel: "Years of professional copywriting experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 5
+                answer: 5, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [
@@ -367,11 +393,13 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional copywriting experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional copywriting experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [
@@ -406,17 +434,19 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional copywriting experience do you have?", 
-                answer: 6
+                answer: 6, 
+                questionLabel: "Years of professional copywriting experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 6
+                answer: 6, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [
             {
                 question: "Describe yourself in one sentence", 
-                answer: "PHD in English, professional copywriter for many years."
+                answer: "PHD in English, professional copywriter for many years.", 
             }, 
             {
                 question: "What is your favorite movie?", 
@@ -445,11 +475,13 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional copywriting experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLabel: "Years of professional copywriting experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 4
+                answer: 4, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [
@@ -484,15 +516,18 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional UX design experience do you have?", 
-                answer: 4
+                answer: 4, 
+                questionLabel: "Years of professional UX design experience"
             }, 
             {
                 question: "How many years of professional Figma experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLable: "Years of professional Figma experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 4
+                answer: 4, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [
@@ -527,15 +562,18 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional UX design experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional UX design experience"
             }, 
             {
                 question: "How many years of professional Figma experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional Figma experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [
@@ -570,15 +608,18 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional UX design experience do you have?", 
-                answer: 1
+                answer: 1, 
+                questionLabel: "Years of professional UX design experience"
             }, 
             {
                 question: "How many years of professional Figma experience do you have?", 
-                answer: 1
+                answer: 1, 
+                questionLabel: "Years of professional Figma experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 3
+                answer: 3, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [
@@ -613,15 +654,18 @@ export const submissions = [
         professionalQuestions: [
             {
                 question: "How many years of professional UX design experience do you have?", 
-                answer: 4
+                answer: 4, 
+                questionLabel: "Years of professional UX design experience"
             }, 
             {
                 question: "How many years of professional Figma experience do you have?", 
-                answer: 4
+                answer: 4, 
+                questionLabel: "Years of professional Figma experience"
             }, 
             {
                 question: "How many years of professional agency experience do you have?", 
-                answer: 2
+                answer: 2, 
+                questionLabel: "Years of professional agency experience"
             }
         ], 
         personalityQuestions: [

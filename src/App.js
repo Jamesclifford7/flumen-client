@@ -9,6 +9,7 @@ import Landing from './components/LandingPage/index'
 import EmployerDashboard from './components/Employers/Dashboard'
 import EmployerChallenge from './components/Employers/Challenge'
 import Submission from './components/Employers/Submission'
+import InterviewConfirmation from './components/Employers/Confirmation'
 
 export const UserContext = React.createContext()
 
@@ -131,6 +132,16 @@ function App() {
           path="/submission/:id"
           render={(props) => (
             <Submission
+              user={user}
+              handleLogout={handleLogout}
+              {...props}
+            />
+          )}
+        />
+        <Route 
+          path="/interview-confirmation/:id"
+          render={(props) => (
+            <InterviewConfirmation
               user={user}
               handleLogout={handleLogout}
               {...props}

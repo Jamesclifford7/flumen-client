@@ -10,25 +10,28 @@ export default function Submission(props: {handleLogout: () => void}) {
     const idNumber = Number(id)
     const submission = submissions.filter((submission) => submission.userId === idNumber)
     const [submissionData, setSubmissionData] = useState(submission[0])
-    console.log(submissionData)
+
+    const handleInterview = (event: any) => {
+        event.preventDefault(); 
+        history.push(`/interview-confirmation/${idNumber}`)
+    }
 
     return (
         <>
             <NavBar handleLogout={props.handleLogout} />
             <div className='submission-container'>
-            <h2>{submissionData.role} for {submissionData.company}</h2>
-            <h2>Candidate: {submissionData.candidateName}</h2>
+                <h2>Candidate: {submissionData.candidateName}</h2>
+                <h2>{submissionData.role} for {submissionData.company}</h2>
                 <div className='submission-challenge'>
-                    {/* <h3>Challenge:</h3>
-                    <p>{submissionData.challengeQuestion}</p> */}
                     <h3>Answer:</h3>
                     <p>{submissionData.challengeAnswer}</p>
                 </div>
+                <h3>Overview</h3>
                 <div className='professional-questions'>
                     {
                         submissionData.professionalQuestions.map((question, idx) => {
                             return <div>
-                                <h4>{question.question}</h4>
+                                <h4>{question.questionLabel}: </h4>
                                 <p>{question.answer}</p>
                             </div>
                         })
@@ -45,7 +48,7 @@ export default function Submission(props: {handleLogout: () => void}) {
                     }
                 </div>
                 <h3>Schedule an Interview with {submissionData.candidateName}?</h3>
-                <button>Schedule</button>
+                <button onClick={event => handleInterview(event)}>Schedule</button>
                 <h4>or</h4>
                 <button>Decline</button>
             </div>

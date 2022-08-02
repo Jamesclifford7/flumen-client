@@ -1,0 +1,11 @@
+.interview-confirmation {
+    background-image: url('../../LandingPage/images/background\ 2.png');
+    background-size: cover;
+    text-align: center; 
+    height: 100vh; 
+}
+
+.interview-confirmation h1 {
+    margin: 0; 
+    padding-top: 20px; 
+}

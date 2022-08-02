@@ -16,3 +16,11 @@
     margin: 0 auto; 
     padding: 20px; 
 }
+
+.submission-container .professional-questions div h4, .submission-container .professional-questions div p {
+    display: inline-block;
+}
+
+.submission-container .professional-questions div p {
+    margin-left: 8px; 
+}
