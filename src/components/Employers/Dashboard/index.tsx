@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 
 export default function EmployerDashboard(props: {user: any; handleLogout: () => void}) {
     const {email} = props.user
+
     return (
         <>
             <NavBar handleLogout={props.handleLogout} />
@@ -22,6 +23,7 @@ export default function EmployerDashboard(props: {user: any; handleLogout: () =>
                                         <h4>-</h4>
                                         <h4>{challenge.company}</h4>
                                     </div>
+                                    <span>Submissions: {challenge.numOfSubmissions}</span>
                                 </Link>
                             </div>
                         })
