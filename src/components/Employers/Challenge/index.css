@@ -16,6 +16,11 @@
     justify-content: space-between;
 }
 
+.employer-challenge-container .company-info div h2 {
+    margin-left: 15px; 
+    display: inline-block;
+}
+
 .employer-challenge-container .challenge-info {
     text-align: center;
 }

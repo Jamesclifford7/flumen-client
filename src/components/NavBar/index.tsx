@@ -1,6 +1,7 @@
 import React from 'react'
 import { UserContext } from '../../App'
 import './index.css'
+import {Link} from 'react-router-dom'
 
 export default function NavBar(props: {handleLogout: (event: any) => void}) {
     const userDetails = React.useContext(UserContext)
@@ -10,7 +11,7 @@ export default function NavBar(props: {handleLogout: (event: any) => void}) {
         ? <nav>
             <h4>Flumen</h4>
             <ul>
-                <li>Login</li>
+                <Link to="/login"><li>Login</li></Link>
             </ul>
         </nav>
         : <nav>

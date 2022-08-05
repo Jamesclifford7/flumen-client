@@ -19,7 +19,6 @@ export default function CandidateDashboard(props: {user: any, handleLogout: () =
                         challenges.map((challenge, idx) => {
                             return <div className="challenge" key={idx}> 
                             <div className='challenge-info'>
-                                {/* <Link to={`/challenge/${challenge.id}`}><h2>{challenge.company}</h2></Link> */}
                                 <h2>{challenge.company}</h2>
                                 <h4>{challenge.role}</h4>
                                 <h5>{challenge.location}</h5>

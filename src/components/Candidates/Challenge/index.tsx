@@ -4,6 +4,8 @@ import { Link, useHistory, useParams } from 'react-router-dom'
 import { useForm, SubmitHandler, useFieldArray } from "react-hook-form";
 import NavBar from '../../NavBar/index'
 import {challenges} from '../../../STORE/challenges'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBuilding, faWrench, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 export default function CandidateChallenge(props: {handleLogout: () => void}) {
     const history = useHistory()
@@ -82,9 +84,18 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
                     <Link to="/dashboard">Back to Results</Link>
                 </div>
                 <section className='company-info'>
-                    <h2>{formData.company}</h2>
-                    <h2>{formData.role}</h2>
-                    <h2>{formData.location}</h2>
+                    <div>
+                        <FontAwesomeIcon icon={faBuilding}/>
+                        <h2>{formData.company}</h2>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faWrench} />
+                        <h2>{formData.role}</h2>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faLocationDot} />
+                        <h2>{formData.location}</h2>
+                    </div>
                 </section>
                 <section className="challenge-info">
                     <h3>{formData.match}/10 match based on your skills and experience</h3>
@@ -92,12 +103,8 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
                         <div className="challenge-description">
                             <h2>Challenge</h2>
                             <p>{formData.challengeQuestion}</p>
-                            {/* <label>Paste your answer submission here:</label> */}
                             <label>{formData.challengeAnswerLabel}: </label>
-
                             <input {...register("challengeAnswer")}/>
-                            {/* <h4>Resume Upload</h4>
-                            <input type="file" name="repository" id="repository" /> */}
                         </div>
                         <div className="additional-questions">
                             <h2>Additional Questions</h2>

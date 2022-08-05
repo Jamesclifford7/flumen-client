@@ -4,6 +4,8 @@ import {challenges} from '../../../STORE/challenges'
 import {Link, useHistory, useParams} from 'react-router-dom'
 import './index.css'
 import {submissions} from '../../../STORE/submissions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBuilding, faWrench, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 export default function EmployerChallenge(props: {handleLogout: () => void}) {
     const history = useHistory()
@@ -21,15 +23,22 @@ export default function EmployerChallenge(props: {handleLogout: () => void}) {
                     <Link to="/employer-dashboard">Back to Results</Link>
                 </div>
                 <section className='company-info'>
-                    <h2>{formData.company}</h2>
-                    <h2>{formData.role}</h2>
-                    <h2>{formData.location}</h2>
+                    <div>
+                        <FontAwesomeIcon icon={faBuilding} />
+                        <h2>{formData.company}</h2>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faWrench} />
+                        <h2>{formData.role}</h2>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faLocationDot} />
+                        <h2>{formData.location}</h2>
+                    </div>
                 </section>
                 <section className="challenge-info">
-                    {/* <div className="challenge-description"> */}
                         <h2>Challenge:</h2>
                         <p>{formData.challengeQuestion}</p>
-                    {/* </div> */}
                 </section>
                 <section className="submissions">
                     <h2>Submissions: </h2>

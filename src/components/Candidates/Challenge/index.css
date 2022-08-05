@@ -33,6 +33,10 @@
     margin-left: 40px; 
 }
 
+.company-info div h2 {
+    margin-left: 15px; 
+}
+
 .challenge-info h3 {
     text-align: center;
 }

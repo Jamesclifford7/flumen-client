@@ -5,6 +5,11 @@
     padding-bottom: 500px; 
 }
 
+.confirmation svg {
+    height: 100px; 
+    width: auto; 
+}
+
 .confirmation h1 {
     margin: 0; 
     padding-top: 50px; 

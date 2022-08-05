@@ -56,17 +56,12 @@
     display: flex; 
     flex-direction: row; 
     justify-content: space-around;
-    /* background-color: #FCFAF9; */
 }
 
 .landing #landing-box-middle .how-it-works div {
-    /* border: solid;  */
     border-radius: 25px; 
     padding: 30px 25px 150px 25px; 
     width: 25%; 
-    /* color: #1098F7; 
-    background-color: white;  */
-    /* background-color:#D9F0FF;  */
     background-color: #bfebff; 
     color: black; 
     text-align: center; 
