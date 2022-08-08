@@ -81,7 +81,7 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
             <NavBar handleLogout={props.handleLogout} />
             <div className="challenge-container">
                 <div className='back'>
-                    <Link to="/dashboard">Back to Results</Link>
+                    <Link to="/candidate-dashboard">Back to Results</Link>
                 </div>
                 <section className='company-info'>
                     <div>

@@ -14,7 +14,7 @@ import InterviewConfirmation from './components/Employers/Confirmation'
 export const UserContext = React.createContext()
 
 function App() {
-  const [user, setUser] = useState({id: null, email: '', password: '', account: ''})
+  const [user, setUser] = useState({id: null, email: '', password: '', account: '', submittedChallenges: []})
   const history = useHistory()
 
   const handleLogin = (event) => {
