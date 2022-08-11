@@ -37,3 +37,12 @@
     margin-right: 25px; 
 }
 
+.challenge .challenge-match a {
+    text-decoration: none; 
+    color: #06D6A0; 
+}
+
+.challenge .challenge-match a:hover {
+    text-decoration: underline; 
+}
+

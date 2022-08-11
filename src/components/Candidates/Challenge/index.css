@@ -8,6 +8,14 @@
     margin-left: 30px; 
 }
 
+.challenge-container .back a {
+    color: black; 
+}
+
+.challenge-container .back a:hover {
+    text-decoration: underline;
+}
+
 .challenge-container a {
     margin-top: 10px; 
     text-decoration: none;
@@ -42,6 +50,16 @@
 
 .challenge-info form button {
     margin-bottom: 20px; 
+    background: none; 
+    background-color: white;
+    border: solid; 
+    padding: 10px 30px; 
+    border-radius: 25px; 
+}
+
+.challenge-info form button:hover {
+    text-decoration: underline;
+    cursor: pointer; 
 }
 
 .challenge-info form .challenge-description {
