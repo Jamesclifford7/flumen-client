@@ -11,6 +11,15 @@
     text-align: left;
 }
 
+.submission-container .back a {
+    color: black; 
+    text-decoration: none; 
+}
+
+.submission-container .back a:hover {
+    text-decoration: underline;
+}
+
 .submission-container h2 {
     margin: 0; 
     padding: 20px; 
@@ -29,4 +38,26 @@
 
 .submission-container .professional-questions div p {
     margin-left: 8px; 
+}
+
+.submission-container button {
+    margin-bottom: 20px; 
+    background: none; 
+    background-color: white;
+    border: solid; 
+    padding: 10px 30px; 
+    border-radius: 25px; 
+}
+
+.submission-container .schedule:hover {
+    background-color: #6EEB83; 
+}
+
+.submission-container .decline:hover {
+    background-color: #FF4365; 
+}
+
+.submission-container button:hover {
+    text-decoration: underline;
+    cursor: pointer; 
 }

@@ -45,10 +45,12 @@ export default function EmployerChallenge(props: {handleLogout: () => void}) {
                     {
                         challengeSubmissions.map((challengeSubmission, idx) => {
                             return (
-                                <div className='submission'>
-                                    <Link to={`/submission/${challengeSubmission.userId}`}><h3>{challengeSubmission.candidateName}</h3></Link>
-                                    <h5>{challengeSubmission.match}/10 Match</h5>
-                                </div>
+                                <Link to={`/submission/${challengeSubmission.userId}`}>
+                                    <div className='submission'>
+                                        <h3>{challengeSubmission.candidateName}</h3>
+                                        <h5>{challengeSubmission.match}/10 Match</h5>
+                                    </div>
+                                </Link>
                             )
                         })
                     }

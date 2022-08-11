@@ -48,20 +48,6 @@
     margin-top: 50px; 
 }
 
-.challenge-info form button {
-    margin-bottom: 20px; 
-    background: none; 
-    background-color: white;
-    border: solid; 
-    padding: 10px 30px; 
-    border-radius: 25px; 
-}
-
-.challenge-info form button:hover {
-    text-decoration: underline;
-    cursor: pointer; 
-}
-
 .challenge-info form .challenge-description {
     background-color: white;
     margin: 0 auto; 
@@ -121,4 +107,18 @@
     margin: 0 auto; 
     width: 700px; 
     height: 200px; 
+}
+
+.challenge-info form button {
+    margin-bottom: 20px; 
+    background: none; 
+    background-color: white;
+    border: solid; 
+    padding: 10px 30px; 
+    border-radius: 25px; 
+}
+
+.challenge-info form button:hover {
+    text-decoration: underline;
+    cursor: pointer; 
 }

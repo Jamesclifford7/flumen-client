@@ -14,3 +14,12 @@
     height: 100px; 
     width: auto; 
 }
+
+.interview-confirmation a {
+    color: black; 
+    text-decoration: none; 
+}
+
+.interview-confirmation a:hover {
+    text-decoration: underline; 
+}

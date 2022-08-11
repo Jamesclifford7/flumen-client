@@ -21,7 +21,7 @@ export default function Submission(props: {handleLogout: () => void}) {
             <NavBar handleLogout={props.handleLogout} />
             <div className='submission-container'>
                 <div className='back'>
-                    <Link to={`/employer-dashboard/${submissionId}`}>Back to Challenge</Link>
+                    <Link to={`/employer-challenge/${submissionId}`}>Back to Challenge</Link>
                 </div>
                 <h2>Candidate: {submissionData.candidateName}</h2>
                 <h2>{submissionData.role} for {submissionData.company}</h2>
@@ -51,9 +51,9 @@ export default function Submission(props: {handleLogout: () => void}) {
                     }
                 </div>
                 <h3>Schedule an Interview with {submissionData.candidateName}?</h3>
-                <button onClick={event => handleInterview(event)}>Schedule</button>
+                <button className='schedule' onClick={event => handleInterview(event)}>Schedule</button>
                 <h4>or</h4>
-                <button>Decline</button>
+                <button className='decline'>Decline</button>
             </div>
         </>
     )

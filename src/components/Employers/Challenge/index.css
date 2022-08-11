@@ -9,6 +9,15 @@
     margin-left: 30px; 
 }
 
+.employer-challenge-container .back a {
+    color: black; 
+    text-decoration: none; 
+}
+
+.employer-challenge-container .back a:hover {
+    text-decoration: underline;
+}
+
 .employer-challenge-container .company-info {
     margin: 40px; 
     display: flex;
@@ -33,7 +42,17 @@
     text-align: center; 
 }
 
-.employer-challenge-container .submissions .submission {
+.employer-challenge-container .submissions a {
+    color: black; 
+    text-decoration: none;
+}
+
+.employer-challenge-container .submissions a:hover {
+    opacity: 0.5;
+    text-decoration: underline;
+}
+
+.employer-challenge-container .submissions a .submission {
     background-color: white;
     width: 70%; 
     margin: 0 auto;
