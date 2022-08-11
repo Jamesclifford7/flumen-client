@@ -1,5 +1,4 @@
 .employer-challenge-container {
-    /* height: 100vh;  */
     background-image: url('../../LandingPage/images/background\ 2.png');
     background-size: cover;
     padding-bottom: 50px; 
@@ -11,7 +10,7 @@
 }
 
 .employer-challenge-container .company-info {
-    margin-right: 40px; 
+    margin: 40px; 
     display: flex;
     justify-content: space-between;
 }

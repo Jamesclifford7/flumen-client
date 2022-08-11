@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import NavBar from '../../NavBar/index'
 import {submissions} from '../../../STORE/submissions'
-import {useHistory, useParams} from 'react-router-dom'
+import {useHistory, useParams, Link} from 'react-router-dom'
 import './index.css'
 
 export default function Submission(props: {handleLogout: () => void}) {
@@ -10,7 +10,7 @@ export default function Submission(props: {handleLogout: () => void}) {
     const idNumber = Number(id)
     const submission = submissions.filter((submission) => submission.userId === idNumber)
     const [submissionData, setSubmissionData] = useState(submission[0])
-
+    const submissionId = submission[0].id
     const handleInterview = (event: any) => {
         event.preventDefault(); 
         history.push(`/interview-confirmation/${idNumber}`)
@@ -20,6 +20,9 @@ export default function Submission(props: {handleLogout: () => void}) {
         <>
             <NavBar handleLogout={props.handleLogout} />
             <div className='submission-container'>
+                <div className='back'>
+                    <Link to={`/employer-dashboard/${submissionId}`}>Back to Challenge</Link>
+                </div>
                 <h2>Candidate: {submissionData.candidateName}</h2>
                 <h2>{submissionData.role} for {submissionData.company}</h2>
                 <div className='submission-challenge'>

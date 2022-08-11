@@ -14,7 +14,6 @@
 }
 
 .challenge {
-    /* border: solid; */
     border-top: none;  
     width: 75%; 
     margin: 0 auto; 
@@ -25,10 +24,6 @@
     background-color: white;
     border-radius: 25px; 
 }
-
-/* .challenge:first-child {
-    border-top: solid !important; 
-} */
 
 .challenge h2, .challenge h4 {
     text-align: left; 
