@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useLayoutEffect} from 'react'
 import NavBar from '../../NavBar'
 import {submissions} from '../../../STORE/submissions'
 import {useParams} from 'react-router-dom'
@@ -8,6 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCheck} from '@fortawesome/free-solid-svg-icons'
 
 export default function InterviewConfirmation(props: {handleLogout: () => void}) {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
     const {id} = useParams<{id?: string}>()
     const idNumber = Number(id)
     const submission = submissions.filter((submission) => submission.userId === idNumber)
