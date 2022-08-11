@@ -11,7 +11,7 @@ export default function NavBar(props: {handleLogout: (event: any) => void}) {
         ? <nav>
             <h4>Flumen</h4>
             <ul>
-                <Link to="/login"><li>Login</li></Link>
+                <li><Link to="/login">Login</Link></li>
             </ul>
         </nav>
         : <nav>

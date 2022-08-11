@@ -3,7 +3,6 @@ nav {
     border-bottom-width: 0.5px; 
     padding-top: 10px; 
     padding-bottom: 10px; 
-    /* background-color: #F2F4F3; */
 }
 
 nav h4 {
@@ -17,4 +16,24 @@ nav ul {
     list-style-type: none;
     text-align: right; 
     width: 60%; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li button {
+    border: none; 
+    background: none;
+    font: inherit; 
+}
+
+nav ul li button:hover {
+    text-decoration: underline; 
+    cursor: pointer; 
 }
