@@ -115,3 +115,22 @@
     padding-bottom: 30px; 
     background-color: #bfebff; 
 }
+
+.landing #landing-box-bottom .signup button {
+    background: none; 
+    border: solid; 
+    padding: 10px 50px; 
+    border-radius: 25px; 
+    color: black; 
+    background-color: white; 
+}
+
+.landing #landing-box-bottom .signup button:hover {
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.landing #landing-box-bottom .signup button a {
+    text-decoration: none; 
+    color: black;
+}

@@ -57,7 +57,6 @@ export default function Landing(props: {handleLogout: () => void}) {
                     <button>Sign Up</button>
                     <h4>Already have an account?</h4>
                     <button><Link to="/login">Login</Link></button>
-                    {/* <button>Login</button> */}
                 </div>
             </section>
             {/* <footer></footer> */}
