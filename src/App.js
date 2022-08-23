@@ -14,7 +14,7 @@ import InterviewConfirmation from './components/Employers/Confirmation'
 export const UserContext = React.createContext()
 
 function App() {
-  const [user, setUser] = useState({id: null, email: '', password: '', account: '', submittedChallenges: []})
+  const [user, setUser] = useState(JSON.parse(window.localStorage.getItem('user')) ? JSON.parse(window.localStorage.getItem('user')) : {id: null, email: '', password: '', account: '', submittedChallenges: []})
   const history = useHistory()
 
   const handleLogin = (event) => {
@@ -28,8 +28,10 @@ function App() {
         id: 1, 
         email: email, 
         password: password, 
-        account: 'candidate'
+        account: 'candidate', 
+        submittedChallenges: []
       }); 
+      window.localStorage.setItem('user', JSON.stringify({id: 1, email: email, password: password, account: 'candidate', submittedChallenges: []}));
       history.push('/candidate-dashboard'); 
     } else if (email === "stevejobs@gmail.com" && password === "password") {
       setUser({
@@ -53,7 +55,9 @@ function App() {
       email: '', 
       password: '', 
       account: '', 
+      
     }); 
+    window.localStorage.clear(); 
     history.push('/')
   }
 
