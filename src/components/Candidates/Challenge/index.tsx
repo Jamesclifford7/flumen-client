@@ -55,9 +55,15 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
 
 
     const onSubmit: SubmitHandler<FormValues> = (data) => {
+        // add submitted challenge to user object
         const user = userDetails.user; 
         user.submittedChallenges.push(data); 
         userDetails.setUser({...user}); 
+
+        // remove challenge from open challenges
+
+
+        // navigate to confirmation page
         history.push('/confirmation'); 
     }
 

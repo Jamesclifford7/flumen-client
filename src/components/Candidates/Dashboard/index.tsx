@@ -2,12 +2,13 @@ import React from 'react'
 import './index.css'
 import { Link } from 'react-router-dom'
 import NavBar from '../../NavBar/index'
-import {challenges} from '../../../STORE/challenges'
-
+import { UserContext } from '../../../App'
 
 export default function CandidateDashboard(props: {user: any, handleLogout: () => void}) {
     const {email} = props.user
-    
+    const userDetails = React.useContext(UserContext)
+    const challenges = userDetails.candidateChallenges
+
     return (
         <>
             <NavBar handleLogout={props.handleLogout} />
@@ -16,7 +17,7 @@ export default function CandidateDashboard(props: {user: any, handleLogout: () =
                 <h4>Open Challenges:</h4>
                 <div className="challenges-container">
                     {
-                        challenges.map((challenge, idx) => {
+                        challenges.map((challenge: any, idx: number) => {
                             return <div className="challenge" key={idx}> 
                             <div className='challenge-info'>
                                 <h2>{challenge.company}</h2>

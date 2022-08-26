@@ -10,13 +10,16 @@ import EmployerDashboard from './components/Employers/Dashboard'
 import EmployerChallenge from './components/Employers/Challenge'
 import Submission from './components/Employers/Submission'
 import InterviewConfirmation from './components/Employers/Confirmation'
+import {challenges} from './STORE/challenges'
 
 export const UserContext = React.createContext()
 
 function App() {
   const [user, setUser] = useState(JSON.parse(window.localStorage.getItem('user')) ? JSON.parse(window.localStorage.getItem('user')) : {id: null, email: '', password: '', account: '', submittedChallenges: []})
+  const [candidateChallenges, setCandidateChallenges] = useState(challenges)
   const history = useHistory()
-  const value = {user, setUser}
+  const value = {user, setUser, candidateChallenges, setCandidateChallenges}
+
   const handleLogin = (event) => {
     event.preventDefault(); 
     const email = event.target.email.value
