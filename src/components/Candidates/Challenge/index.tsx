@@ -3,18 +3,18 @@ import './index.css'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import { useForm, SubmitHandler, useFieldArray } from "react-hook-form";
 import NavBar from '../../NavBar/index'
-import {challenges} from '../../../STORE/challenges'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBuilding, faWrench, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { UserContext } from '../../../App'
 
 export default function CandidateChallenge(props: {handleLogout: () => void}) {
     const userDetails = React.useContext(UserContext)
+    const challenges = userDetails.candidateChallenges
     const userId = userDetails.user.id
     const history = useHistory()
     const {id} = useParams<{id?: string}>()
     const idNumber = Number(id)
-    const challenge = challenges.filter((challenge) => challenge.id === idNumber)
+    const challenge = challenges.filter((challenge: any) => challenge.id === idNumber)
     const [formData, setFormData] = useState(challenge[0])
 
     useLayoutEffect(() => {
@@ -100,7 +100,7 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
                         <div className="additional-questions">
                             <h2>Additional Questions</h2>
                             {
-                                professionalQuestions.map((item, i) => {
+                                professionalQuestions.map((item: any, i) => {
                                     return <div className="question" key={i}>
                                         <label>{item.question}</label>
                                         <select {...register(`professionalQuestions.${i}.answer`)}>
@@ -115,7 +115,7 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
                                 })
                             }
                             {
-                                personalityQuestions.map((item, i) => {
+                                personalityQuestions.map((item: any, i) => {
                                     return <div className="question" key={i}>
                                     <label>{item.question}</label>
                                     <input type="text" {...register(`personalityQuestions.${i}.answer`)} />
