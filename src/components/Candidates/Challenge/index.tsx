@@ -16,6 +16,7 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
     const idNumber = Number(id)
     const challenge = challenges.filter((challenge: any) => challenge.id === idNumber)
     const [formData, setFormData] = useState(challenge[0])
+    const updatedChallenges = challenges.filter((challenge: any) => challenge.id !== idNumber)
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0)
@@ -23,7 +24,7 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
 
     type FormValues = {
         id: number | string, 
-        userId: number, 
+        userId: number | null, 
         company: string,
         role: string, 
         location: string, 
@@ -57,11 +58,12 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
     const onSubmit: SubmitHandler<FormValues> = (data) => {
         // add submitted challenge to user object
         const user = userDetails.user; 
-        user.submittedChallenges.push(data); 
-        userDetails.setUser({...user}); 
+        const updatedUser = {...user, userId: userId}
+        updatedUser.submittedChallenges.push(data); 
+        userDetails.setUser({updatedUser}); 
 
         // remove challenge from open challenges
-
+        userDetails.setCandidateChallenges(updatedChallenges)
 
         // navigate to confirmation page
         history.push('/confirmation'); 

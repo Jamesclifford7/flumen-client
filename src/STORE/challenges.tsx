@@ -1,7 +1,7 @@
 export const challenges = [
     {
         id: 1, 
-        userId: 1, 
+        userId: null, 
         company: 'Amazon', 
         role: 'React Developer', 
         location: 'Remote', 
@@ -48,7 +48,7 @@ export const challenges = [
     }, 
     {
         id: 2, 
-        userId: 1, 
+        userId: null, 
         company: 'Forbes', 
         role: 'Copywriter ', 
         location: 'Remote', 
@@ -87,7 +87,7 @@ export const challenges = [
     }, 
     {
         id: 3, 
-        userId: 1, 
+        userId: null, 
         company: 'Instagram', 
         role: 'UX Designer', 
         location: 'Remote', 
