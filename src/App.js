@@ -16,7 +16,7 @@ export const UserContext = React.createContext()
 function App() {
   const [user, setUser] = useState(JSON.parse(window.localStorage.getItem('user')) ? JSON.parse(window.localStorage.getItem('user')) : {id: null, email: '', password: '', account: '', submittedChallenges: []})
   const history = useHistory()
-
+  const value = {user, setUser}
   const handleLogin = (event) => {
     event.preventDefault(); 
     const email = event.target.email.value
@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className="App">
-      <UserContext.Provider value={user}>
+      <UserContext.Provider value={value}>
         <Route 
           exact path="/"
           render={(props) => (

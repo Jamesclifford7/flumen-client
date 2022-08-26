@@ -6,8 +6,11 @@ import NavBar from '../../NavBar/index'
 import {challenges} from '../../../STORE/challenges'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBuilding, faWrench, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { UserContext } from '../../../App'
 
 export default function CandidateChallenge(props: {handleLogout: () => void}) {
+    const userDetails = React.useContext(UserContext)
+    const userId = userDetails.user.id
     const history = useHistory()
     const {id} = useParams<{id?: string}>()
     const idNumber = Number(id)
@@ -52,27 +55,9 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
 
 
     const onSubmit: SubmitHandler<FormValues> = (data) => {
-        // const html = parseInt(data.htmlExperience) ?
-        console.log(data)
-
-        // setFormData(prevState => ({
-        //     userId: prevState.userId, 
-        //     company: prevState.company, 
-        //     role: prevState.role, 
-        //     location: prevState.location, 
-        //     match: prevState.match, 
-        //     challengeQuestion: prevState.challengeQuestion, 
-        //     repositoryLink: data.repositoryLink, 
-        //     resume: prevState.resume, 
-        //     htmlExperience: data.htmlExperience, 
-        //     cssExperience: data.cssExperience, 
-        //     javaScriptExperience: data.javaScriptExperience, 
-        //     reactExperience: data.javaScriptExperience, 
-        //     description: data.description, 
-        //     invention: data.invention, 
-        //     novel: data.novel, 
-        //     additional: data.additional
-        // }))
+        const user = userDetails.user; 
+        user.submittedChallenges.push(data); 
+        userDetails.setUser({...user}); 
         history.push('/confirmation'); 
     }
 
