@@ -63,7 +63,7 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
         userDetails.setUser({updatedUser}); 
 
         // remove challenge from open challenges
-        userDetails.setCandidateChallenges(updatedChallenges)
+        userDetails.setCandidateChallenges(updatedChallenges); 
 
         // navigate to confirmation page
         history.push('/confirmation'); 
