@@ -5,6 +5,7 @@ import Login from './components/Login/index'
 import CandidateDashboard from './components/Candidates/Dashboard/index'
 import CandidateChallenge from './components/Candidates/Challenge/index'
 import CandidateConfirmation from './components/Candidates/ConfirmationPage/index'
+import CandidateProfile from './components/Candidates/Profile/index'
 import Landing from './components/LandingPage/index'
 import EmployerDashboard from './components/Employers/Dashboard'
 import EmployerChallenge from './components/Employers/Challenge'
@@ -89,6 +90,16 @@ function App() {
           path="/candidate-dashboard"
           render={(props) => (
             <CandidateDashboard 
+              user={user}
+              handleLogout={handleLogout}
+              {...props}
+            />
+          )}
+        />
+        <Route 
+          path="/candidate-profile"
+          render={(props) => (
+            <CandidateProfile 
               user={user}
               handleLogout={handleLogout}
               {...props}

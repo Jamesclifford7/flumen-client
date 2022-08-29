@@ -37,6 +37,9 @@ function Menu(props: {isShowing: boolean; handleLogout: (event: any) => void}) {
     }
 
     return (
-        <div className="dropdown-menu"><button onClick={event => props.handleLogout(event)}>Logout</button></div>
+        <div className="dropdown-menu">
+            <Link to="/candidate-profile">Profile</Link>
+            <button onClick={event => props.handleLogout(event)}>Logout</button>
+        </div>
     )
 }
