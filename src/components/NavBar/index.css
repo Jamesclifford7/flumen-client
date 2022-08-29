@@ -3,6 +3,8 @@ nav {
     border-bottom-width: 0.5px; 
     padding-top: 10px; 
     padding-bottom: 10px; 
+    display: flex; 
+    align-items: center;
 }
 
 nav h4 {
@@ -16,6 +18,20 @@ nav ul {
     list-style-type: none;
     text-align: right; 
     width: 60%; 
+}
+
+nav ul .dropdown-menu {
+    border: solid; 
+    width: 100px; 
+    position: absolute; 
+    margin-left: 790px; 
+    text-align: center;
+}
+
+nav ul li {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end; 
 }
 
 nav ul li a {
@@ -36,4 +52,9 @@ nav ul li button {
 nav ul li button:hover {
     text-decoration: underline; 
     cursor: pointer; 
+}
+
+nav ul li img {
+    height: 30px; 
+    width: auto; 
 }
