@@ -20,8 +20,10 @@ export default function NavBar(props: {handleLogout: (event: any) => void}) {
             <h4>Flumen</h4>
             <ul>
                 {/* <li><button onClick={event => props.handleLogout(event)}>Logout</button></li> */}
-                <li><button onClick={() => setShowingMenu(!showingMenu)}><img src={userIcon} alt="user profile icon"/></button></li>
-                <Menu isShowing={showingMenu} handleLogout={props.handleLogout} />
+                <li>
+                    <button onClick={() => setShowingMenu(!showingMenu)}><img src={userIcon} alt="user profile icon"/></button>
+                    <Menu isShowing={showingMenu} handleLogout={props.handleLogout} />
+                </li>
             </ul>
         </nav>
     )
