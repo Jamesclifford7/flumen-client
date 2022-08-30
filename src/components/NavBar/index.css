@@ -24,7 +24,7 @@ nav ul .dropdown-menu {
     border: solid; 
     width: 100px; 
     position: absolute; 
-    margin-top: 75px; 
+    margin-top: 85px; 
     margin-right: -30px; 
     text-align: center;
     background-color: white;
@@ -49,6 +49,11 @@ nav ul li button {
     border: none; 
     background: none;
     font: inherit; 
+}
+
+nav ul li .icon-button {
+    display: flex; 
+    align-items: center; 
 }
 
 nav ul li button:hover {

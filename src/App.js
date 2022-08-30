@@ -16,7 +16,6 @@ import {challenges} from './STORE/challenges'
 export const UserContext = React.createContext()
 
 function App() {
-  // const [user, setUser] = useState(JSON.parse(window.localStorage.getItem('user')) ? JSON.parse(window.localStorage.getItem('user')) : {id: null, email: '', password: '', account: '', submittedChallenges: []})
   const [user, setUser] = useState(JSON.parse(window.localStorage.getItem('user')) ? JSON.parse(window.localStorage.getItem('user')) : {id: null})
   const [candidateChallenges, setCandidateChallenges] = useState(challenges)
   const history = useHistory()
