@@ -3,4 +3,66 @@
     background-size: cover;
     padding-bottom: 100px; 
     height: 100vh; 
+    padding-top: 30px; 
+}
+
+.candidate-profile .back {
+    margin-left: 30px; 
+    margin-bottom: 30px;
+}
+
+.candidate-profile .back a {
+    color: black; 
+    text-decoration: none; 
+}
+
+.candidate-profile .back a:hover {
+    text-decoration: underline;
+}
+
+.candidate-profile .profile-container {
+    display: flex; 
+    flex-direction: row;
+    background-color: white;
+    width: 90%; 
+    margin: 0 auto; 
+    height: 100vh; 
+}
+
+.candidate-profile .profile-container .profile-container-left {
+    width: 50%; 
+    padding-left: 50px; 
+}
+
+.candidate-profile .profile-container .profile-container-left img {
+    height: 100px; 
+    width: 100px; 
+}
+
+.candidate-profile .profile-container .profile-container-right {
+    border-left: solid; 
+    border-width: 0.5px; 
+    width: 50%; 
+}
+
+.candidate-profile .profile-container .profile-container-right h2 {
+    text-align: center;
+}
+
+.candidate-profile .profile-container .profile-container-left img, .candidate-profile .profile-container .profile-container-right h2 {
+    padding-top: 50px; 
+}
+
+.candidate-profile .profile-container .profile-container-right .candidate-submitted-challenge {
+    text-align: center; 
+    border: solid; 
+    width: 85%; 
+    margin: 0 auto; 
+    border-radius: 25px; 
+    display: flex; 
+    justify-content: space-around;
+}
+
+.candidate-profile .profile-container .profile-container-right .candidate-submitted-challenge h3 {
+    display: inline-block;
 }

@@ -11,7 +11,7 @@ export default function Login(props: {handleLogin: (event: any) => void; handleL
         <>
             <NavBar handleLogout={props.handleLogout} />
             <div className="login">
-                <h2>Login for candidates:</h2>
+                <h2>Login for Candidates:</h2>
                 <form onSubmit={e => props.handleLogin(e)}>
                     <div className='input-container'>
                         <div className="input">

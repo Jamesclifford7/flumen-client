@@ -15,7 +15,7 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
     const {id} = useParams<{id?: string}>()
     const idNumber = Number(id)
     const challenge = challenges.filter((challenge: any) => challenge.id === idNumber)
-    const [formData, setFormData] = useState(challenge[0])
+    const [formData] = useState(challenge[0])
     const updatedChallenges = challenges.filter((challenge: any) => challenge.id !== idNumber)
 
     useLayoutEffect(() => {
@@ -60,7 +60,8 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
         const user = userDetails.user; 
         const updatedUser = {...user, userId: userId}
         updatedUser.submittedChallenges.push(data); 
-        userDetails.setUser({updatedUser}); 
+        userDetails.setUser({...updatedUser}); 
+        window.localStorage.setItem('user', JSON.stringify({...updatedUser}));
 
         // remove challenge from open challenges
         userDetails.setCandidateChallenges(updatedChallenges); 

@@ -16,26 +16,28 @@ import {challenges} from './STORE/challenges'
 export const UserContext = React.createContext()
 
 function App() {
-  const [user, setUser] = useState(JSON.parse(window.localStorage.getItem('user')) ? JSON.parse(window.localStorage.getItem('user')) : {id: null, email: '', password: '', account: '', submittedChallenges: []})
+  // const [user, setUser] = useState(JSON.parse(window.localStorage.getItem('user')) ? JSON.parse(window.localStorage.getItem('user')) : {id: null, email: '', password: '', account: '', submittedChallenges: []})
+  const [user, setUser] = useState(JSON.parse(window.localStorage.getItem('user')) ? JSON.parse(window.localStorage.getItem('user')) : {id: null})
   const [candidateChallenges, setCandidateChallenges] = useState(challenges)
   const history = useHistory()
   const value = {user, setUser, candidateChallenges, setCandidateChallenges}
-
+  
   const handleLogin = (event) => {
     event.preventDefault(); 
     const email = event.target.email.value
     const password = event.target.password.value
-    
 
     if (email === "alanturing@gmail.com" && password === "password") {
       setUser({
         id: 1, 
+        name: 'Alan Turing', 
         email: email, 
         password: password, 
         account: 'candidate', 
+        skills: ['Front End Developer', 'Back End Developer'], 
         submittedChallenges: []
       }); 
-      window.localStorage.setItem('user', JSON.stringify({id: 1, email: email, password: password, account: 'candidate', submittedChallenges: []}));
+      window.localStorage.setItem('user', JSON.stringify({id: 1, name: 'Alan Turing', email: email, password: password, account: 'candidate', skills: ['Front End Developer', 'Back End Developer'], submittedChallenges: []}));
       history.push('/candidate-dashboard'); 
     } else if (email === "stevejobs@gmail.com" && password === "password") {
       setUser({
