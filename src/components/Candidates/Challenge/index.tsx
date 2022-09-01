@@ -58,10 +58,10 @@ export default function CandidateChallenge(props: {handleLogout: () => void}) {
     const onSubmit: SubmitHandler<FormValues> = (data) => {
         // add submitted challenge to user object
         const user = userDetails.user; 
-        const updatedUser = {...user, userId: userId}
-        updatedUser.submittedChallenges.push(data); 
-        userDetails.setUser({...updatedUser}); 
-        window.localStorage.setItem('user', JSON.stringify({...updatedUser}));
+        const updatedData = {...data, userId: userId}
+        user.submittedChallenges.push(updatedData)
+        userDetails.setUser({...user}); 
+        window.localStorage.setItem('user', JSON.stringify({...user}));
 
         // remove challenge from open challenges
         userDetails.setCandidateChallenges(updatedChallenges); 
